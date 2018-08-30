@@ -1,0 +1,2 @@
+# ignore these files when committing to git
+node_modules

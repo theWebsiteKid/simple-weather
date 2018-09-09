@@ -27,14 +27,6 @@ request(url, (err, res, body) => {
     }
 });
 
-// home page
-let getHomePage = (req, res) => {
-    res.send('Welcome to ☀️SimpleWeather');
-}
-
-// get home page
-app.get('/', getHomePage);
-
 // serve static files in public directory
 app.use(express.static('public'));
 // parse incoming JSON data (use req.body)

@@ -13,7 +13,7 @@ request(url, (err, res, body) => {
     if (!err && res.statusCode == 200) {
         console.log('body:', body);
     } else {
-        console.log('error:', error);
+        throw err
     }
 });
 // serve static files in public directory

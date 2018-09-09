@@ -20,7 +20,6 @@ request(url, (err, res, body) => {
         let weather = JSON.parse(body);
         let message = `It's ${weather.main.temp}°F in ${weather.name}.`;
         console.log(message);
-
     }
 });
 

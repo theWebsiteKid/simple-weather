@@ -34,8 +34,11 @@ let getHomePage = (req, res) => {
 
 // get home page
 app.get('/', getHomePage);
+
 // serve static files in public directory
 app.use(express.static('public'));
+// parse incoming JSON data (use req.body)
+app.use(bodyParser.json());
 // app running on port 3000
 app.listen(PORT, () => {
     console.log('SimpleWeather app running on port 3000');

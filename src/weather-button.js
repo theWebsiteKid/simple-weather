@@ -19,7 +19,7 @@ class WeatherButton extends React.Component {
             'Get Weather!'
         );
     }
-}
+};
 
 const domContainer = document.querySelector('#weather_button_container');
 ReactDOM.render(element(WeatherButton), domContainer);

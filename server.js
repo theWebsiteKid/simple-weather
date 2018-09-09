@@ -1,4 +1,4 @@
-'use strict' // use strict mode
+'use strict'; // use strict mode
 
 // node.js requires
 require('dotenv').config();

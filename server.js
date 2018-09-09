@@ -1,4 +1,4 @@
-'use strict'; // use strict mode
+'use strict'; // strict mode
 
 // node.js requires
 require('dotenv').config();
@@ -29,9 +29,9 @@ request(url, (err, res, body) => {
 
 // serve static files in public directory
 app.use(express.static('public'));
-// parse incoming JSON data (use req.body)
+// parse incoming JSON data (req.body obj)
 app.use(bodyParser.json());
 // app running on port 3000
 app.listen(PORT, () => {
-    console.log('SimpleWeather app running on port 3000');
+    console.log('SimpleWeather running on port 3000');
 });

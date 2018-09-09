@@ -4,7 +4,8 @@
 require('dotenv').config();
 const express = require('express');
 const request = require('request');
-//init express app
+const bodyParser = require('body-parser');
+// initialize express app
 const app = express();
 
 // env variables
@@ -26,6 +27,13 @@ request(url, (err, res, body) => {
     }
 });
 
+// home page
+let getHomePage = (req, res) => {
+    res.send('Welcome to ☀️SimpleWeather');
+}
+
+// get home page
+app.get('/', getHomePage);
 // serve static files in public directory
 app.use(express.static('public'));
 // app running on port 3000

@@ -6,14 +6,17 @@ const app = express();
 // api params
 let apiKey = '6aa6b5d216402a79cdb225a50c4ad9ab';
 let zip = '30305';
-let url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${apiKey}`;
+let url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${apiKey}`;
 
 // api request
 request(url, (err, res, body) => {
-    if (!err && res.statusCode == 200) {
-        console.log('body:', body);
+    if (err) {
+        throw err;
     } else {
-        throw err
+        let weather = JSON.parse(body);
+        let message = `It's ${weather.main.temp}°F in ${weather.name}.`;
+        console.log(message);
+
     }
 });
 // serve static files in public directory

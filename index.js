@@ -1,7 +1,10 @@
+'use strict' // use strict mode
+
+// node.js requires
 require('dotenv').config();
 const express = require('express');
 const request = require('request');
-
+//init express app
 const app = express();
 
 // env variables

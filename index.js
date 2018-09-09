@@ -9,7 +9,7 @@ request('https://api.openweathermap.org/data/2.5/weather?zip=30305&appid=6aa6b5d
         if (!err && res.statusCode == 200) {
             console.log('body:', body);
         } else {
-            console.log('error', error);
+            console.log('error:', error);
         }
     }
 );
